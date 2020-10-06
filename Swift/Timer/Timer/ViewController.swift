@@ -9,36 +9,36 @@ class ViewController: UIViewController {
     var minutes : Int = 0
     var hours : Int = 0
     
-    @IBOutlet weak var labelTimer: UILabel!
+    @IBOutlet weak var LabelTimer: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelTimer.text = "\(hours):\(minutes):\(seconds)"
-        
+        LabelTimer.text = "\(hours):\(minutes):\(seconds)"
+                
         // TR : Zamanlayici nesnesi olusturulur.
         // EN : The timer object is initialized.
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerFunction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerFunction), userInfo: nil,repeats: true)
     }
     
     // TR : Tetiklenecek Fonksiyon.
     // EN : Function to be triggered.
     @objc func TimerFunction(){
-        seconds += 1
         
+        seconds += 1
         if(seconds > 59){
             minutes += 1
             seconds = 0
         }
-        
+            
         if(minutes > 59){
             hours += 1
             minutes = 0
-        }
-        
-        labelTimer.text = "\(hours):\(minutes):\(seconds)"
+        }        
+        LabelTimer.text = "\(hours):\(minutes):\(seconds)"
     }
-    
-    @IBAction func actionButtonTouchUpInside(_ sender: UIButton) {
+
+    @IBAction func ButtonReset(_ sender: UIButton) {
         
         // TR : Sayaci sonlandir.
         // EN : Terminate the counter.
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         seconds = 0
         minutes = 0
         hours = 0
-        labelTimer.text = "\(hours):\(minutes):\(seconds)"
+        LabelTimer.text = "\(hours):\(minutes):\(seconds)"
     }
 }
 

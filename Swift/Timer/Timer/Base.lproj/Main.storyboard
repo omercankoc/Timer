@@ -16,38 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByS-nw-vpK">
-                                <rect key="frame" x="103" y="44" width="208" height="80"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zY3-F1-MTE">
+                                <rect key="frame" x="116" y="44" width="183" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1W8-cF-Z4q">
-                                <rect key="frame" x="103" y="132" width="208" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYj-ku-Lmg">
+                                <rect key="frame" x="116" y="136" width="183" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="Xqd-zC-5n0"/>
+                                    <constraint firstAttribute="height" constant="35" id="0ri-Rn-ehK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
-                                    <action selector="actionButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dEd-ER-4Be"/>
+                                    <action selector="ButtonReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zBR-AA-Jd5"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1W8-cF-Z4q" firstAttribute="top" secondItem="ByS-nw-vpK" secondAttribute="bottom" constant="8" symbolic="YES" id="2wG-1Q-ISx"/>
-                            <constraint firstItem="ByS-nw-vpK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ffi-SP-3Z3"/>
-                            <constraint firstItem="ByS-nw-vpK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QOa-vX-6bH"/>
-                            <constraint firstItem="ByS-nw-vpK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="Too-m6-8hN"/>
-                            <constraint firstItem="ByS-nw-vpK" firstAttribute="leading" secondItem="1W8-cF-Z4q" secondAttribute="leading" id="eow-gF-cI6"/>
-                            <constraint firstItem="ByS-nw-vpK" firstAttribute="trailing" secondItem="1W8-cF-Z4q" secondAttribute="trailing" id="pTC-hs-bYg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1W8-cF-Z4q" secondAttribute="bottom" constant="697" id="xXa-KZ-SOg"/>
+                            <constraint firstItem="zY3-F1-MTE" firstAttribute="trailing" secondItem="sYj-ku-Lmg" secondAttribute="trailing" id="8nT-ra-wtL"/>
+                            <constraint firstItem="zY3-F1-MTE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="F1K-zV-VW0"/>
+                            <constraint firstItem="zY3-F1-MTE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K65-LI-ba8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sYj-ku-Lmg" secondAttribute="bottom" constant="691" id="LTf-a0-Trf"/>
+                            <constraint firstItem="sYj-ku-Lmg" firstAttribute="top" secondItem="zY3-F1-MTE" secondAttribute="bottom" constant="8" id="fws-1P-mVD"/>
+                            <constraint firstItem="zY3-F1-MTE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="lwI-0I-L7R"/>
+                            <constraint firstItem="zY3-F1-MTE" firstAttribute="leading" secondItem="sYj-ku-Lmg" secondAttribute="leading" id="n8l-dr-G4y"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="labelTimer" destination="ByS-nw-vpK" id="sdL-RT-hBq"/>
+                        <outlet property="LabelTimer" destination="zY3-F1-MTE" id="P4Q-Wl-0Sl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
