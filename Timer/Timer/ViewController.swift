@@ -15,10 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         LabelTimer.text = "\(hours):\(minutes):\(seconds)"
-                
-        // TR : Zamanlayici nesnesi olusturulur.
-        // EN : The timer object is initialized.
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerFunction), userInfo: nil,repeats: true)
     }
     
     // TR : Tetiklenecek Fonksiyon.
@@ -38,7 +34,12 @@ class ViewController: UIViewController {
         LabelTimer.text = "\(hours):\(minutes):\(seconds)"
     }
 
-    @IBAction func ButtonReset(_ sender: UIButton) {
+    @IBAction func start(_ sender: Any) {
+        // TR : Zamanlayici nesnesi olusturulur.
+        // EN : The timer object is initialized.
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerFunction), userInfo: nil,repeats: true)
+    }
+    @IBAction func reset(_ sender: UIButton) {
         
         // TR : Sayaci sonlandir.
         // EN : Terminate the counter.
